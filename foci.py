@@ -1,3 +1,4 @@
+from operator import indexOf
 import random
 golokA= []
 golokB = []
@@ -57,3 +58,18 @@ if d>0 :
 else:
     print("Nem volt döntetlen mérkőzés.")
 
+print("5. feladat - Hazai gyozelmek:")
+
+for i in range(5):
+    if gyozelmek[i]=="H":
+        print(f"{i+1}. fordulo")
+
+print("6. feladat")
+
+kulonbseg =[]
+for i in range(5):
+    kulonbseg.append(abs(golokA[i]-golokB[i]))
+
+print(kulonbseg)
+
+print(f"A legnagyobb golkulonbseget a(z) {kulonbseg.index(max(kulonbseg))+1} forduloban ertek el, ami {max(kulonbseg)} gol volt.")
